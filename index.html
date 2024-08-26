@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div id="parent">
+        <div class="child" id="tab1">COUNTER</div>
+        <div class="child" id="tab2">PRIME NUMBER FINDER</div>
+        <div class="child" id="tab3">TIMER</div>
+        <div class="child" id="tab4">MODAL</div>
+    </div>
+    <div class="tabs-content hi" id="counters">
+        <i class="fa fa-window-close" aria-hidden="true" id="close"></i>
+        <div id="counter">
+            <p id="count">0</p>
+            <h5 id="evenodd">Neither Even Nor Odd</h5>
+            <div>
+                <button onclick="incr()">+</button>
+                <button onclick="decr()">-</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs-content" id="prime">
+        <div id="card1">
+            <h1>Prime Number Finder</h1>
+            <input type="number" id="number" placeholder="Enter Number..." required>
+            <div class="buttons">
+                <button type="reset" id="reset">Reset</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+            <div id="result">
+                <h2>Result</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs-content" id="timer">
+        <h1>Timer</h1>
+    </div>
+
+    <div class="tabs-content" id="modals">
+        <button id="overlay-button">Overlay</button>
+        <div class="card2" id="card2">
+            <H1>MODAL</H1>
+            <button id="button2">Click Me</button>
+        </div>
+        <div id="modal" class="none">
+            <button id="button1" class="close">X</button>
+            <h2 class="modal-text">Hello, This is a modal....</h2>
+        </div>
+        <div id="overlay" class="animate__animated place">
+            <button id="button3" class="close">X</button>
+            <p style="display: flex; margin-top: 50%; margin-left: 30%;">This is an overlay....</p>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

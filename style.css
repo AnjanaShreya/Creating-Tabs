@@ -1,0 +1,219 @@
+#parent {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+.child {
+    border: 2px solid rgb(33, 112, 33);
+    background-color: lightgreen;
+    width: 25%;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabs-content {
+    position: absolute;
+}
+#counters, #prime, #timer, #modals {
+    display: none;
+}   
+#counters {
+    top: 30%;
+    left: 24%;
+}
+#prime {
+    top: 33%;
+    left: 36%;
+}
+
+#popupstab {
+    top: 33%;
+    left: 36%;
+}
+
+/* --------------------COUNTER-------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(216, 239, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#counter{
+    height: 50vh;
+    width: 50vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+button {
+    height: 30px;
+    width: 60px;   
+    font-size: 25px;
+}
+#evenodd {
+    padding: 15px;
+}
+
+/* ---------------PRIME NUMBER FINDER---------------------- */
+
+#card1 {
+    background-color: rgb(12, 182, 12);
+    padding: 40px;
+    border-radius: 20px;   
+    box-shadow: green 10px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    padding: 5px;
+    margin: 10px;
+    font-size: large;
+    border-radius: 5px;
+    width: 90px;
+}
+input {
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: antiquewhite;
+    padding-left: 5px;
+}
+#result {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    width: 310px;
+    height: 100px;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+h2 {
+    padding-bottom: 15px;
+}
+
+/* ---------------TIMER---------------------- */
+
+#timer {
+    position: absolute;
+    top: 45%;
+    font-size: 45px;
+    background-color:rgb(236, 181, 192);
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(227, 26, 66);
+    box-shadow: rgb(227, 26, 66) 10px 10px 10px;
+}
+
+/* ---------------------------MODAL--------------------------------- */
+
+.place {
+    width: 300px;
+    height: 300px;
+    /* background: linear-gradient(to right, #ff0000, #0000ff);*/
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 190px;
+    margin-left: -135px;
+    display: none;
+    transform: translate(-50%, -50%);  
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-fill-mode: forwards; /* Ensure the element retains the last state of the animation */
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(0.3) translate(-50%, -50%);
+        background-color: red;
+        border-radius: 100%;
+    }
+    50% {
+        background-color: orange;
+    }
+    100% {
+        transform: scale(1.5) translate(-50%, -50%);
+        background-color: yellow;
+    }
+}
+
+@keyframes stretch {
+    0% {
+      transform: scale(.3);
+      background-color: red;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      transform: scale(1.2);
+      background-color: yellow;
+    }
+  }
+
+#overlay-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 350%);  
+}
+
+.card2 {
+    background-color: rgb(131, 174, 233);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 63%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.none {
+    display: none;
+    width: 400px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: rgb(176, 212, 226);
+    box-shadow: skyblue 10px 10px 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+
+.close {
+    position: absolute;
+    left: 0;
+}
+
+.modal-text {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
